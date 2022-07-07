@@ -8,7 +8,7 @@
       height: 2rem;
       border:none;
       font-weight: bolder;
-      border-radius: var(--round);
+      border-radius: var(--urem-250);
       background-color: var(--gray-400);
       color: var(--gray-100);
   }

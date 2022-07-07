@@ -1,9 +1,8 @@
 <script>
   import { push } from "svelte-spa-router";
   import NavButton from "./components/NavButton.svelte";
-  import {location} from 'svelte-spa-router'
+  import { location } from "svelte-spa-router";
 
-  
   let navPaths = [
     {
       id: 0,
@@ -13,7 +12,7 @@
     {
       id: 1,
       name: "Mod Wiki",
-      path: "#/wiki/test/stuff",
+      path: "#/wiki",
     },
     {
       id: 2,
@@ -21,15 +20,13 @@
       path: "#/about",
     },
   ];
-  let activeTab
-  
-  for (let i = navPaths.length-1; i >= 0; i--) {
+  let activeTab;
+
+  for (let i = navPaths.length - 1; i >= 0; i--) {
     if ($location == navPaths[i].path) {
       activeTab = i;
     }
   }
-  
-  
 
   function changeTab(loc) {
     push(loc.path);
@@ -41,7 +38,7 @@
   <img class="logo" src="/lightM.svg" />
   {#each navPaths as loc}
     <NavButton
-      active={activeTab==loc.id}
+      active={activeTab == loc.id}
       on:click={() => {
         changeTab(loc);
       }}>{loc.name}</NavButton
@@ -51,12 +48,14 @@
 
 <style>
   nav {
+    box-sizing: border-box;
+    border-bottom: 2px solid var(--gray-500);
     padding-inline: 1rem;
     position: fixed;
     display: flex;
     top: 0;
     width: 100%;
-    background: var(--gray-500);
+    background: var(--gray-400);
     height: 3rem;
   }
   .logo {

@@ -9,6 +9,6 @@
   }
 </style>
 
-<div in:fade>
+<div class="notfound" in:fade>
   PageNotFound
 </div>

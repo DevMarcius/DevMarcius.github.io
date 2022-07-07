@@ -8,8 +8,9 @@
         height: 3rem;
         padding-inline: 1rem;
         border:none;
-        font-weight: bolder;
-        border-radius: var(--rounded);
+        font-size: 1rem;
+        font-weight: 500;
+        border-radius: var(--urem-250);
         background-color: transparent;
         color: var(--gray-100);
     }

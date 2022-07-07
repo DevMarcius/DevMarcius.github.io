@@ -6,12 +6,11 @@
   import NotFound from "./routes/NotFound.svelte";
   import Header from "./Header.svelte";
   
+  import { location } from "svelte-spa-router";
 
   let routes = {
     "/": Home,
-    "/wiki/:topic": Wiki,
-    "/wiki/:topic/:subtopic": Wiki,
-
+    "/wiki/:topic?/:subtopic?": Wiki,
     "*": NotFound,
   };
 </script>
@@ -23,6 +22,7 @@
     margin-top:3rem;
   }
 </style>
+
 
 
 <Header/>
