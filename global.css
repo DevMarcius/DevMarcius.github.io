@@ -5,7 +5,10 @@
   --red:   hsl(355, 95%, 62%);
   --yellow:     hsl(46, 98%, 51%);
 
-  --round: 0.25rem;
+  --urem-100: 0.25rem;
+  --urem-250: 0.25rem;
+  --urem-500: 0.50rem;
+  --urem-750: 0.75rem;
 
   --gray-000: #fafafa;
   --gray-100: #8e8f91;
@@ -15,11 +18,15 @@
   --gray-500: #18191c;
   --gray-600: #141417;
   --gray-900: #000;
+  font-size: 1em;
 }
 
 #app{
   flex:1;
   display:flex;
+}
+*{
+  font-family: 'Open Sans', sans-serif;
 }
 body {
   overflow:hidden;
@@ -28,19 +35,12 @@ body {
   color: var(--gray-100);
   background-color: var(--gray-600);
   margin: 0;
-  font-size: large;
-  font-weight: 400;
+}
+dl,ul,ol{
+  margin:0;
+  padding:0;
 }
 h1,h2,h3,h4,h5{
   padding:0;
   margin:0;
-}
-h1{
-  font-size: 2rem;
-}
-h2{
-  font-size: 1.5rem;
-}
-h3{
-  font-size: 1.25rem;
 }
